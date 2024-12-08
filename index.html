@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo自作</title>
+    <style>
+      * {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
     <form id="new-task">
-        <input type="text" id="new-task-title">
-        <button type="submit">追加</button>
+      <input type="text" id="new-task-title" />
+      <button type="submit">追加</button>
     </form>
-    <ul id="list">
-        <li>Test</li>
-    </ul>
-</body>
+    <ul id="list"></ul>
+    <script src="dist/index.js"></script>
+  </body>
 </html>
