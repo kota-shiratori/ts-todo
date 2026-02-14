@@ -22,20 +22,24 @@ class TodoManager {
     }
     public list(filter: FilterType): Todo[] {
         if (filter === "Active") {
-            const result = this.todos.filter((todos) => todos.completed === false);
+            const result = this.todos.filter((todo) => !todo.completed);
             return result;
         } else if (filter === "Completed") {
-            const result = this.todos.filter((todos) => todos.completed === true);
+            const result = this.todos.filter((todo) => todo.completed);
             return result;
         } else {
             return this.todos;
         }
     }
     public toggle(id: number): Todo | undefined {
-        
+        const result = this.todos.find((todo) => todo.id === id)
+        if (result) {
+            result.completed = !result.completed;
+        }
+        return result;
     }
     public removeTodo(id: number): void {
-
+        this.todos = this.todos.filter((todo) => todo.id !== id);
     }
 
 }
