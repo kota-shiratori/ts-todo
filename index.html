@@ -7,14 +7,24 @@
     <title>todo</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <div id="app">
-      <h1>Todo</h1>
-      <form id="todo-form">
-        <input class="border" type="text" id="todo-input" />
-        <button class="rounded-2xl py-2 px-3 bg-blue-400 text-white cursor-pointer" type="submit">追加</button>
+  <body class="min-h-screen bg-gray-50 text-gray-800 antialiased">
+    <div id="app" class="mx-auto max-w-lg px-4 py-12">
+      <h1 class="mb-8 text-center text-3xl font-bold tracking-tight">Todo</h1>
+      <form id="todo-form" class="mb-6 flex gap-2">
+        <input
+          class="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-sm transition placeholder:text-gray-400 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400/30"
+          type="text"
+          id="todo-input"
+          placeholder="やることを入力…"
+        />
+        <button
+          class="shrink-0 cursor-pointer rounded-lg bg-blue-500 px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:bg-blue-600 active:scale-95"
+          type="submit"
+        >
+          追加
+        </button>
       </form>
-      <ul id="todo-list"></ul>
+      <ul id="todo-list" class="space-y-2"></ul>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
